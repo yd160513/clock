@@ -24,6 +24,7 @@ function createWindow() {
     width: 150,
     height: 70,
     resizable: false,
+    alwaysOnTop: true,
     frame: false,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
