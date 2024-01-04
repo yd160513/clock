@@ -7,7 +7,7 @@ const date = ref('')
 const week = ref('')
 
 const getCurrentDate = () => {
-  currentTime.value = moment().format('hh:mm:ss');
+  currentTime.value = moment().format('HH:mm:ss');
   date.value = moment().format('YYYY/MM/DD');
   week.value = getWeek(moment().day())
 }
