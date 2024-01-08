@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import moment from 'moment'
+import 'moment-timezone';
 import { onMounted, ref } from "vue";
 
 const currentTime = ref('')
@@ -7,9 +8,9 @@ const date = ref('')
 const week = ref('')
 
 const getCurrentDate = () => {
-  currentTime.value = moment().format('HH:mm:ss');
-  date.value = moment().format('YYYY/MM/DD');
-  week.value = getWeek(moment().day())
+  currentTime.value = moment().tz('Asia/Shanghai').format('HH:mm:ss');
+  date.value = moment().tz('Asia/Shanghai').format('YYYY/MM/DD');
+  week.value = getWeek(moment().tz('Asia/Shanghai').day())
 }
 
 const getWeek = (week: number) => {

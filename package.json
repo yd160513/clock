@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "moment": "^2.29.4",
+    "moment-timezone": "^0.5.44",
     "vue": "^3.3.4"
   },
   "devDependencies": {
